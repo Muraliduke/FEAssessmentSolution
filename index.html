@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PickYourTrail">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tasks</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- include library script files here -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="assets/library/angular.min.js"></script>
+   </head>
+   <body ng-controller='HomeCtrl'>
+      <div class="container-fluid">
+          <h1>PickYourTrail Front-end</h1>
+         <!-- solution1 starts here -->
+         <div class='solution1'>
+            <h2>1.Moving a block inside a controlled canvas using action
+               buttons
+            </h2>
+            <div class="row">
+               <div class='parent-content col-md-8 col-sm-12' >
+                  <div class='child-content' ng-style="myObj">
+                  </div>
+               </div>
+               <div class='col-md-4 col-sm-12'>
+                  <button type="button" class="btn btn-primary" ng-click='fwd()'>Forward</button>
+                  <br/>
+                  <button type="button" class="btn btn-success" ng-click='bwd()'>Backward</button>
+               </div>
+            </div>
+         </div>
+         <!-- solution1 starts here -->
+         <!-- solution2 starts here -->
+         <div class='solution2'>
+            <h2>2.List Insertion Visualization</h2>
+            <form>
+               <div class="form-group">
+                  <label for="todoList">List:</label>
+                  <input type="text" placeholder="TYPE YOUR LISTS HERE" ng-model='inputData.lists' ng-enter="addList(inputData.lists)" class="form-control" id="todoList">
+               </div>
+               <button type="button" class="btn btn-primary" ng-click='addList(inputData.lists)'>Insert</button>
+            </form>
+            <div>
+               <h3>Added Lists:</h3>
+               <ul class="list-group">
+                  <li class="list-group-item" ng-repeat='list in totalLists track by $index'  ng-class="{'listClr': $index === 2}">
+                     {{list}} 
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- solution2 ends here -->
+         <!-- solution3 starts here -->
+         <div class='solution3'>
+            <h2>3.Enhanced Flexible Grid </h2>
+            <div class='grids-parent'>
+               <div class='flexi-grid'>
+                  <div class='flexi-grid'>
+                     child 1
+                  </div>
+                  <div class='flexi-grid'>
+                     child 2
+                  </div>
+                  <div class='flexi-grid'>
+                     child 3
+                  </div>
+                  <div class='flexi-grid'>
+                     child 4
+                  </div>
+               </div>
+               <div class='flexi-grid'>
+                  <div class='flexi-grid'>
+                     child 1
+                  </div>
+                  <div class='flexi-grid'>
+                     child 2
+                  </div>
+                  <div class='flexi-grid'>
+                     child 3
+                  </div>
+                  <div class='flexi-grid'>
+                     child 4
+                  </div>
+               </div>
+               <div class='flexi-grid'>
+                  <div class='flexi-grid'>
+                     child 1
+                  </div>
+                  <div class='flexi-grid'>
+                     child 2
+                  </div>
+                  <div class='flexi-grid'>
+                     child 3
+                  </div>
+                  <div class='flexi-grid'>
+                     child 4
+                  </div>
+               </div>
+               <div class='flexi-grid'>
+                  <div class='flexi-grid'>
+                     child 1
+                  </div>
+                  <div class='flexi-grid'>
+                     child 2
+                  </div>
+                  <div class='flexi-grid'>
+                     child 3
+                  </div>
+                  <div class='flexi-grid'>
+                     child 4
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- solution3 ends here -->
+      </div>
+      
+      <!-- include your custom app files here -->
+      <script src="app/app.js"></script>
+      <!-- include your controller files here -->
+      <script src="app/controllers/homeController.js"></script>
+   </body>
+</html>

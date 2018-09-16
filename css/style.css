@@ -1,0 +1,55 @@
+.listClr {
+    color: red !important;
+}
+
+.parent-content {
+    height: 300px;
+    border: 1px solid green;
+    position: relative;
+}
+
+.child-content {
+    height: 100px;
+    width: 20%;
+    background-color: black;
+    position: absolute;
+    
+}
+
+.solution1 button{
+    width: 80%;
+    margin: 2% auto;
+}
+
+.grids-parent > div {
+    height: 200px;
+    border: 1px solid black;
+    background: red;
+}
+
+.flexi-grid > div {
+    height: 50px;
+    border: 1px solid black;
+    background: yellow;
+}
+
+@media screen and (max-width: 720px) and (min-width: 361px){
+    .flexi-grid{
+        width: 50%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 360px) and (min-width: 0px){
+    .flexi-grid{
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 721px) {
+    .flexi-grid{
+        width: 25%;
+        float: left;
+    }
+}
